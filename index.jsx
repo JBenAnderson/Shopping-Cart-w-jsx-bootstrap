@@ -1,4 +1,4 @@
-function NavBar({menuitems, minstock}) {
+function NavBar({menuitems}) {
  //first list filters items by their 'instock' number if greater than minstock number
   let list1 = menuitems.filter(item => item.instock >= minstock);
   
@@ -14,4 +14,4 @@ const menuItems = [{name: 'apple', instock: 2 }, {name: 'pineapple', instock: 3 
 {name: 'pear', instock: 0 }, {name: 'peach', instock: 3 }, {name: 'orange', instock: 1 }
 ];
 //Render to the ReactDOM what menuItems are greater than minstock number
-ReactDom.render(<NavBar menuitems={menuItems} minstock={2} />, document.getElementById("root"));
+ReactDom.render(<NavBar menuitems={menuItems} />, document.getElementById("root"));
